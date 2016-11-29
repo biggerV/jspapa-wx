@@ -1,0 +1,17 @@
+<import src="html2wxml.wxml" />
+
+<view class="container topic">
+
+  <view class="topic-main">
+    <view class="topic-title">{{topic.title}}</view>
+    <view class="topic-created">{{author.name}}  {{topic.created}}</view>
+    <view class="topic-content">
+        <block wx:if="{{topic.content.child.length > 0}}">
+            <block wx:for="{{topic.content.child}}">
+                <template is="tpl-0" data="{{item}}"></template>
+            </block>
+        </block>
+    </view>
+  </view>
+
+</view>

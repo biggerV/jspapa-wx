@@ -1,0 +1,21 @@
+@import "html2wxml.wxss";
+
+.topic-main{
+    padding: 10px;
+}
+.topic-title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+.topic-created{
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #999;
+}
+.topic-content{
+    font-size: 14px;
+    color: #444;
+    line-height: 26px;
+}

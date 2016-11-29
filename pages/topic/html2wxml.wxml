@@ -1,0 +1,193 @@
+<template name="tpl-0">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-1" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-1">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-2" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-2">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-3" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-3">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-4" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-4">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-5" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-5">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-6" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-6">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-7" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-7">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-8" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-8">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-9" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-9">
+    <block wx:if="{{item.node=='element'}}">
+        <block wx:if="{{item.tag=='img'}}">
+            <image src="http://www.jspapa.com{{item.attr.src}}" class="html-{{item.tag}}"></image>
+        </block>
+        <block wx:else>
+            <view class="html-{{item.tag}}">
+                <block wx:for="{{item.child}}">
+                    <template is="tpl-10" data="{{item}}"></template>
+                </block>
+            </view>
+        </block>
+
+    </block>
+    <block wx:else>
+        {{item.text}}
+    </block>
+</template>
+
+<template name="tpl-10">
+    <text class="html-text">{{item.text}}</text>
+</template>

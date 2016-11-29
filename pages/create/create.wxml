@@ -1,0 +1,12 @@
+<view class="container create">
+  <view class="tip">发布一个新话题</view>
+  <view class="form">
+    <picker mode="selector" bindchange="bindCateChange" value="{{index}}" range="{{catesArr}}" class="form-picker">
+      <view class="form-picker-val">{{catesArr[index]}}</view>
+      <view class="form-picker-arrow">></view>
+    </picker>
+    <input type="text" value="" placeholder="请输入标题" class="form-input" bindblur="bindTitleBlur" />
+    <textarea value="" class="form-textarea" placeholder="请输入内容" bindblur="bindContentBlur" maxlength="0" />
+    <button type="primary" class="form-input" bindtap="bindPushTap">发布</button>
+  </view>
+</view>

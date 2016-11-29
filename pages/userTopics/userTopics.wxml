@@ -1,0 +1,14 @@
+<view class="container userTopics">
+
+  <scroll-view scroll-y="true" bindscrolltolower="bindScrollToLower" class="topics">
+    <block wx:for="{{topics}}" wx:key="_id">
+      <view class="topics-item" bindtap="bindTopicTap" data-id="{{item._id}}">
+        <image class="topics-avatar" src="{{userInfo.avatarUrl}}"></image>
+        <view class="topics-title" url="../topic/topic?id={{item.id}}">{{item.title}}</view>
+        <view class="topics-reply">{{item.comments}}/{{item.views}}</view>
+      </view>
+    </block>
+    <view class="tip" style="text-align:center" wx:if="{{!hasMore}}">全部已加载完</view>
+  </scroll-view>
+
+</view>

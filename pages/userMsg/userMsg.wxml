@@ -1,0 +1,39 @@
+<!--pages/userMsg/userMsg.wxml-->
+<view class="container userMsgs">
+
+  <scroll-view scroll-y="true" bindscrolltolower="bindScrollToLower" class="msgs">
+    <block wx:for="{{msgs}}" wx:key="_id">
+      <view class="msgs-item" bindtap="bindMsgTap" data-id="{{item._id}}" data-read="{{item.read}}" data-idx="{{index}}">
+        <view class="msgs-item-inner">
+            <image class="msgs-avatar" src="{{userInfo.avatarUrl}}"></image>
+            <block wx:if="{{item.type == 'comment'}}">
+                <view class="msgs-title">【{{item.sender.name}}】评论了您的话题</view>
+            </block>
+            <block wx:if="{{item.type == 'reply'}}">
+                <view class="msgs-title">【{{item.sender.name}}】在评论话题时@了你</view>
+            </block>
+            <block wx:if="{{item.type == 'sys'}}">
+                <view class="msgs-title">系统消息</view>
+            </block>
+            <block wx:if="{{item.type == 'private'}}">
+                <view class="msgs-title">【{{item.sender.name}}】给您发了【私信】</view>
+            </block>
+            <block wx:if="{{item.type == 'point'}}">
+                <view class="msgs-title">{{item.content.reason}} 积分{{item.content.point>0 ? '+'+item.content.point : item.content.point}}</view>
+            </block>
+            <view class="msgs-readflag {{item.read?'':'msgs-readflag-red'}}">{{item.read?"已读":"未读"}}</view>
+        </view>
+        <block wx:if="{{item.open}}">
+            <view class="msgs-content" wx:if="{{item.type == 'comment'}}">【{{item.sender.name}}】评论了您的话题【{{item.content.title}}】：{{item.content.comment}}</view>
+            <view class="msgs-content" wx:if="{{item.type == 'reply'}}">【{{item.sender.name}}】在评论话题【{{item.content.title}}】时@了你：{{item.content.comment}}</view>
+            <view class="msgs-content" wx:if="{{item.type == 'sys'}}">{{item.content}}</view>
+            <view class="msgs-content" wx:if="{{item.type == 'private'}}">{{item.content}}</view>
+            <view class="msgs-content" wx:if="{{item.type == 'point'}}">{{item.content.reason}}：{{item.content.title}}</view>
+        </block>
+      </view>
+    </block>
+    <view class="tip" style="text-align:center" wx:if="{{!hasMore}}">全部已加载完</view>
+  </scroll-view>
+
+</view>
+

@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container home">
+
+  <scroll-view scroll-x="true" class="nav">
+    <block wx:for="{{cates}}" wx:key="id">
+      <view url="/index/index/{{item.id}}" bindtap="bindNavTap" data-id="{{item.id}}"  class="nav-a {{item.selected ? 'nav-cur' : ''}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+
+
+  <scroll-view scroll-y="true" bindscrolltolower="bindScrollToLower" bindscrolltoupper="bindScrollToUpper" class="topics">
+    <block wx:for="{{topics}}" wx:key="_id">
+      <view class="topics-item" bindtap="bindTopicTap" data-id="{{item._id}}">
+        <image class="topics-avatar" src="http://www.jspapa.com/avatar/avatar-{{item.user.name}}"></image>
+        <view class="topics-title" url="../topic/topic?id={{item.id}}">{{item.title}}</view>
+        <view class="topics-reply">{{item.comments}}/{{item.views}}</view>
+      </view>
+    </block>
+    <view class="tip" style="text-align:center" wx:if="{{!hasMore}}">全部已加载完</view>
+  </scroll-view>
+
+</view>

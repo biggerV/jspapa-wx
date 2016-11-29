@@ -1,0 +1,53 @@
+<view class="container user" wx:if="{{showUser}}">
+
+  <view class="user-header">
+    <image src="{{userInfo.avatarUrl}}" class="user-avatar"></image>
+    <view class="user-name">{{userInfo.nickName}}</view>
+  </view>
+  <view class="user-body">
+    <view class="user-box">
+      <image class="user-box-img" src="{{domain}}/wximg/icon_my_topics.png"></image>
+      <view class="user-box-name" bindtap="bindMyTopics">发布的话题</view>
+      <view class="user-box-num" hidden>10</view>
+    </view>
+    <view class="user-box">
+      <image class="user-box-img" src="{{domain}}/wximg/icon_join_topic.png"></image>
+      <view class="user-box-name" bindtap="bindMyReplies">参与的话题</view>
+      <view class="user-box-num" hidden>10</view>
+    </view>
+    <view class="user-box">
+      <image class="user-box-img" src="{{domain}}/wximg/icon_message.png"></image>
+      <view class="user-box-name" bindtap="bindMyMsg">站内信箱</view>
+      <view class="user-box-num" hidden>10</view>
+    </view>
+    <view class="user-box">
+      <image class="user-box-img" src="{{domain}}/wximg/icon_transfer.png"></image>
+      <view class="user-box-name" bindtap="bindMyStorage">清除缓存</view>
+      <view class="user-box-num">{{storageSize}}/{{storageLimitSize}}M</view>
+    </view>
+
+  </view>
+
+</view>
+
+
+<view class="container login" wx:if="{{showLogin}}">
+  <view class="tip">如果您已经有JSpapa社区的账号，请绑定当前微信。否则请注册一个账号。</view>
+  <view class="form">
+    <input type="text" value="{{username}}" bindblur="bindUserNameBlur" placeholder="请输入用户名" class="form-input" />
+    <input type="password" value="{{pwd}}" bindblur="bindPwdBlur" placeholder="请输入密码" class="form-input" />
+    <button type="primary" class="form-input" bindtap="bindUserTap">立即绑定</button>
+    <button type="default" class="form-input" bindtap="bindRegTap">注册新账号</button>
+  </view>
+</view>
+
+<view class="container reg" wx:if="{{showReg}}">
+  <view class="tip">您注册的账号将与当前微信绑定，以后微信打开自动登陆</view>
+  <view class="form">
+    <input type="text" value="{{username}}" bindblur="bindUserNameBlur" placeholder="请输入用户名" class="form-input" />
+    <input type="password" value="{{pwd}}" bindblur="bindPwdBlur" placeholder="请输入密码" class="form-input" />
+    <input type="text" value="{{email}}" bindblur="bindEmailBlur" placeholder="请输入邮箱（用于找回密码）" class="form-input" />
+    <button type="primary" class="form-input" bindtap="bindRegNewTap">注册账号</button>
+    <button type="default" class="form-input" bindtap="bindLoginTap">已经有账号？</button>
+  </view>
+</view>

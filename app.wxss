@@ -1,0 +1,51 @@
+/**app.wxss**/
+.container {
+  box-sizing: border-box;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+
+.form{
+  padding: 10px;
+}
+.form-input,
+.form-textarea{
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 12px;
+  padding: 5px 0;
+}
+.form-textarea{
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.form-picker{
+  font-size: 14px;
+  position: relative;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+}
+.form-picker-arrow{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -13px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  text-align: right;
+  transform: rotate(90deg);
+  color: #666;
+}
+
+
+
+.tip{
+    font-size: 12px;
+    color: #666;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
