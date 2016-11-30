@@ -19,7 +19,6 @@ Page({
     })
 
     //ajax根据id拉取话题内容
-    //TODO：样式无法让图片大小自适应,除非后台传图片的宽高过来，然后渲染时候设置进去，大坑！
     func.getTopic.call(this, options.id);
   }
 })

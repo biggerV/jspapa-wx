@@ -1,6 +1,13 @@
 # jspapa-wx
 jspapa微信小程序版本，官网：https://www.jspapa.com
 
+## Star
+如果你觉得对你有用，请给我点个Star！^-^
+
+## 后台
+后台在这里  
+[https://github.com/biggerV/jspapa](https://github.com/biggerV/jspapa)
+
 ## 预览图
 
 [https://www.jspapa.com/topic/show/583801aefa70ac6cf90610f2](https://www.jspapa.com/topic/show/583801aefa70ac6cf90610f2)

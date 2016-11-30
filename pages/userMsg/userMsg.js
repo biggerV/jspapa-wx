@@ -46,7 +46,7 @@ Page({
       msgs[datas.idx]['read']=true;
       var openId = wx.getStorageSync('userInfo').openId;
       wx.request({
-        url: app.globalData.domain+'/api/.../'+datas.id+'/'+openId,
+        url: app.globalData.domain+'/api/v1/setMsgRead/'+datas.id+'/'+openId,
         method: 'GET',
         success: function(data) {
           var data = data.data;

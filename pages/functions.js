@@ -10,7 +10,7 @@ var funcs = {
         var that = this;
         var page = page || 1;
         wx.request({
-            url: hostName+'/api/.../'+cate+"?page="+page,
+            url: hostName+'/api/v1/topics/'+cate+"?page="+page,
             success: function(res) {
                 that.setData({
                     topics: that.data.loadflag ? res.data.topics : that.data.topics.concat(res.data.topics),
@@ -28,7 +28,7 @@ var funcs = {
     getTopic: function (id){
         var that = this;
         wx.request({
-            url: hostName+'/api/.../'+id,
+            url: hostName+'/api/v1/topic/'+id,
             success: function(res) {
                 var data = res.data;
                 data.topic.created = util.formatTime(new Date(data.topic.created));
@@ -66,7 +66,7 @@ var funcs = {
         var that = this;
         var page = page || 1;
         wx.request({
-            url: hostName+'/api/.../'+etype+'/'+openId+"?page="+page,
+            url: hostName+'/api/v1/'+etype+'/'+openId+"?page="+page,
             success: function(res) {
                 if(!res.data.success){
                     return funcs.reLogin(res.data.msg);
@@ -90,7 +90,7 @@ var funcs = {
         var that = this;
         var page = page || 1;
         wx.request({
-            url: hostName+'/api/.../'+openId+"?page="+page,
+            url: hostName+'/api/v1/getWxUserMsgs/'+openId+"?page="+page,
             success: function(res) {
                 if(res.data.msgs.length<=0){
                     return;

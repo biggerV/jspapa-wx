@@ -34,7 +34,7 @@ Page({
   bindUserTap: function(){
     var that = this;
     wx.request({
-      url: app.globalData.domain+'/api/...',
+      url: app.globalData.domain+'/api/v1/wxBind',
       data: {name: that.data.username, pwd: that.data.pwd, wxUser: that.data.userInfo},
       method: 'POST',
       success: function(data) {
@@ -60,7 +60,7 @@ Page({
   bindRegNewTap: function(){
     var that = this;
     wx.request({
-      url: app.globalData.domain+'/api/...',
+      url: app.globalData.domain+'/api/v1/wxReg',
       data: {name: that.data.username, pwd: that.data.pwd, email: that.data.email, wxUser: that.data.userInfo},
       method: 'POST',
       success: function(data) {

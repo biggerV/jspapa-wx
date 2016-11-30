@@ -1,4 +1,3 @@
-//jspapa.com for wx
 //app.js
 App({
   onLaunch: function () {
@@ -30,7 +29,7 @@ App({
               if (res.code) {
                 //发起网络请求
                 wx.request({
-                  url: that.globalData.domain+'/api/...',
+                  url: that.globalData.domain+'/api/v1/getWxUser',
                   data: edata,
                   method: 'POST',
                   success: function(data) {
@@ -49,7 +48,7 @@ App({
   },
   globalData:{
     userInfo:null,
-    domain: "https://www.jspapa.com",
+    domain: "",//输入你的https地址：如 https://xxx.com
     //TODO：cates这里最好是用接口获取数据，这样能和网站同步
     cates: [
       {

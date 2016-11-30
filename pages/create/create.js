@@ -39,7 +39,7 @@ Page({
     var that = this;
     var userInfo = wx.getStorageSync('userInfo');
     wx.request({
-      url: app.globalData.domain+'/api/...',
+      url: app.globalData.domain+'/api/v1/createTopic',
       data: {title: that.data.title, content: that.data.content+"\n发自JSpapa微信小程序V0.6", cate: that.data.cate, openId: userInfo.openId},
       method: 'POST',
       success: function(data) {
