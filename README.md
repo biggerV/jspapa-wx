@@ -1,6 +1,10 @@
 # jspapa-wx
 jspapa微信小程序版本，官网：https://www.jspapa.com
 
+有问题请加我微信，入群解决
+
+![扫码加我微信，拉你入前端群](https://github.com/biggerV/webpack4-lesson/blob/master/wechat-qrcode.jpg?raw=true)
+
 ## Star
 如果你觉得对你有用，请给我点个Star！^-^
 
